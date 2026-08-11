@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -10,11 +8,15 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #09090b;
-    --foreground: #ffffff;
+    --foreground: #fafafa;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
