@@ -4,7 +4,6 @@ import bcrypt from "bcryptjs";
 import { prisma } from "@/lib/prisma";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-    debug: true,
     trustHost: true,
     secret: process.env.AUTH_SECRET || "authlab-super-secret-key-1234567890-very-long-fallback",
     providers: [
