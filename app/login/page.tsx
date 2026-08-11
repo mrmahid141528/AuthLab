@@ -11,17 +11,14 @@ export default function LoginPage() {
     return (
         <div
             className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8 font-sans bg-cover bg-center relative"
-            style={{ backgroundImage: "url('/bg.jpg')" }}
+            style={{ backgroundImage: "url('/thumbnail-bg.jpg')" }}
         >
-            {/* Subtle Overlay to ensure contrast */}
             <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] pointer-events-none"></div>
 
             <div className="w-full max-w-md relative z-10 transition-all duration-500 ease-out transform hover:scale-[1.01]">
-                {/* The Glass Card */}
                 <div className="bg-white/10 backdrop-blur-xl p-8 sm:p-10 border border-white/20 rounded-3xl shadow-2xl relative overflow-hidden group">
-                    {/* Inner glowing accent */}
-                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-purple-500/30 rounded-full blur-3xl pointer-events-none group-hover:bg-purple-400/40 transition-colors duration-700"></div>
-                    <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-pink-500/20 rounded-full blur-3xl pointer-events-none group-hover:bg-pink-400/30 transition-colors duration-700"></div>
+                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-white/10 rounded-full blur-3xl pointer-events-none group-hover:bg-white/20 transition-colors duration-700"></div>
+                    <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-white/5 rounded-full blur-3xl pointer-events-none group-hover:bg-white/15 transition-colors duration-700"></div>
 
                     <div className="text-center mb-8 relative z-10">
                         <h1 className="text-3xl font-bold tracking-wide text-white drop-shadow-md pb-2">Welcome</h1>
@@ -41,7 +38,7 @@ export default function LoginPage() {
                                 type="email"
                                 required
                                 placeholder="Email"
-                                className="w-full px-6 py-4 bg-black/30 border border-white/20 rounded-2xl text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#8e2954] focus:bg-black/40 transition-all duration-300 backdrop-blur-sm"
+                                className="w-full px-6 py-4 bg-black/30 border border-white/20 rounded-2xl text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-black/40 transition-all duration-300 backdrop-blur-sm"
                             />
                         </div>
 
@@ -52,14 +49,14 @@ export default function LoginPage() {
                                 type="password"
                                 required
                                 placeholder="Password"
-                                className="w-full px-6 py-4 bg-black/30 border border-white/20 rounded-2xl text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#8e2954] focus:bg-black/40 transition-all duration-300 backdrop-blur-sm"
+                                className="w-full px-6 py-4 bg-black/30 border border-white/20 rounded-2xl text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-black/40 transition-all duration-300 backdrop-blur-sm"
                             />
                         </div>
 
                         <div className="pt-3">
                             <SubmitButton
                                 pendingText="LOGGING IN..."
-                                className="w-full px-6 py-4 bg-[#6c2844] text-white/90 tracking-widest uppercase rounded-2xl text-sm font-bold hover:bg-[#8f3659] hover:shadow-[0_0_20px_rgba(142,41,84,0.5)] focus:outline-none focus:ring-2 focus:ring-white transition-all duration-300 active:scale-[0.98] border border-white/10"
+                                className="w-full px-6 py-4 bg-white/20 text-white tracking-widest uppercase rounded-2xl text-sm font-bold hover:bg-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-300 active:scale-[0.98] border border-white/30 backdrop-blur-md"
                             >
                                 LOGIN
                             </SubmitButton>
