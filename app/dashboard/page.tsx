@@ -49,7 +49,7 @@ export default async function DashboardPage() {
                         <div className="space-y-4">
                             <div className="flex justify-between items-center pb-3 border-b border-white/10">
                                 <span className="text-white/40 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em]">Permission</span>
-                                <span className="text-white text-xs sm:text-sm font-bold bg-white/10 border border-white/10 px-3 py-1.5 rounded-lg tracking-widest">{session.user?.role || "USER"}</span>
+                                <span className="text-white text-xs sm:text-sm font-bold bg-white/10 border border-white/10 px-3 py-1.5 rounded-lg tracking-widest">{(session.user as any)?.role || "USER"}</span>
                             </div>
                             <div className="flex justify-between items-center pb-3 border-b border-white/10">
                                 <span className="text-white/40 text-[10px] sm:text-xs font-black uppercase tracking-[0.2em]">Adapter</span>
