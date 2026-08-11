@@ -1,5 +1,71 @@
 @import "tailwindcss";
 
+@theme {
+  --animate-fly-1: fly-1 45s linear infinite;
+  --animate-fly-2: fly-2 30s linear infinite;
+  --animate-fly-3: fly-3 38s linear infinite;
+
+  @keyframes fly-1 {
+    0% {
+      transform: translate(-20vw, 30vh) scale(0.6);
+      opacity: 0;
+    }
+
+    5% {
+      opacity: 0.6;
+    }
+
+    95% {
+      opacity: 0.6;
+    }
+
+    100% {
+      transform: translate(120vw, -10vh) scale(0.6);
+      opacity: 0;
+    }
+  }
+
+  @keyframes fly-2 {
+    0% {
+      transform: translate(-20vw, 5vh) scale(0.5);
+      opacity: 0;
+    }
+
+    5% {
+      opacity: 0.4;
+    }
+
+    95% {
+      opacity: 0.4;
+    }
+
+    100% {
+      transform: translate(120vw, 15vh) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  @keyframes fly-3 {
+    0% {
+      transform: translate(-20vw, 15vh) scale(0.7);
+      opacity: 0;
+    }
+
+    5% {
+      opacity: 0.3;
+    }
+
+    95% {
+      opacity: 0.3;
+    }
+
+    100% {
+      transform: translate(120vw, -5vh) scale(0.7);
+      opacity: 0;
+    }
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #09090b;
