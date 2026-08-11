@@ -88,11 +88,16 @@ export function DashboardLayout({ children, session }: { children: React.ReactNo
                 </div>
             )}
 
-            {/* Main Content Dashboard */}
             <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-12 relative z-20 h-full overflow-y-auto custom-scrollbar">
                 {children}
             </main>
 
+            {/* Bottom Bar Glass */}
+            <footer className="w-full h-10 sm:h-12 flex items-center justify-center px-4 bg-white/5 backdrop-blur-xl border-t border-white/10 relative z-20 mt-auto">
+                <p className="text-white/50 text-[9px] sm:text-[10px] tracking-[0.15em] uppercase text-center">
+                    © 2026 AUTHLAB. DEVELOPED BY <a href="https://www.mrmahid.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-400 font-bold transition-colors underline decoration-white/30 decoration-[1.5px] hover:decoration-emerald-400">MR MAHID</a>.
+                </p>
+            </footer>
         </div>
     );
 }

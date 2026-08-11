@@ -67,7 +67,7 @@ export function AuthLayout({ children }: { children: React.ReactNode }) {
             {/* Bottom Bar Glass */}
             <footer className="w-full h-10 sm:h-12 flex items-center justify-center px-4 bg-white/5 backdrop-blur-xl border-t border-white/10 relative z-20">
                 <p className="text-white/50 text-[9px] sm:text-[10px] tracking-[0.15em] uppercase text-center">
-                    © 2026 AUTHLAB. CRAFTED FOR EXCELLENCE.
+                    © 2026 AUTHLAB. DEVELOPED BY <a href="https://www.mrmahid.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-400 font-bold transition-colors underline decoration-white/30 decoration-[1.5px] hover:decoration-emerald-400">MR MAHID</a>.
                 </p>
             </footer>
         </div>
