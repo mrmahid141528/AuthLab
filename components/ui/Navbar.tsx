@@ -8,9 +8,9 @@ export async function Navbar() {
     return (
         <header className="border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-black sticky top-0 z-50">
             <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-                <Link href="/" className="font-bold text-xl tracking-tight text-black dark:text-white">
-                    AuthLab
-                </Link>
+                <a href="https://www.mrmahid.com/" target="_blank" rel="noopener noreferrer" className="font-bold text-xl tracking-tight text-black dark:text-white hover:opacity-80 transition-opacity">
+                    AuthLab By Mr Mahid
+                </a>
 
                 <nav className="flex items-center gap-4">
                     {session ? (

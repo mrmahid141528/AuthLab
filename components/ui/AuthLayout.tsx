@@ -39,7 +39,9 @@ export function AuthLayout({ children }: { children: React.ReactNode }) {
             {/* Top Bar Glass */}
             <header className="w-full h-14 sm:h-16 flex items-center justify-between px-6 bg-white/5 backdrop-blur-xl border-b border-white/10 relative z-20 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
                 <div className="text-white font-bold text-lg sm:text-xl tracking-[0.2em] drop-shadow-md">
-                    AUTHLAB
+                    <a href="https://www.mrmahid.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity uppercase">
+                        AUTHLAB By Mr Mahid
+                    </a>
                 </div>
                 <div className="text-white/70 text-[10px] sm:text-xs font-semibold tracking-widest uppercase">
                     Premium UI

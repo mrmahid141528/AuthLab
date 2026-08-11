@@ -22,7 +22,11 @@ export function DashboardLayout({ children, session }: { children: React.ReactNo
                             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
                         </svg>
                     </div>
-                    <span className="text-white font-bold text-xl sm:text-2xl tracking-[0.15em] drop-shadow-md">AUTHLAB</span>
+                    <span className="text-white font-bold text-xl sm:text-2xl tracking-[0.15em] drop-shadow-md">
+                        <a href="https://www.mrmahid.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity uppercase">
+                            AUTHLAB By Mr Mahid
+                        </a>
+                    </span>
                 </div>
 
                 {/* Desktop Nav */}
