@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: "Learn Authentication by Building It.",
 };
 
+import { ConditionalWrapper } from "@/components/ui/ConditionalWrapper";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -19,11 +21,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased min-h-screen flex flex-col`}>
-        <Navbar />
-        <main className="flex-1">
+        <ConditionalWrapper>
+          <Navbar />
+        </ConditionalWrapper>
+
+        <main className="flex-1 w-full flex flex-col">
           {children}
         </main>
-        <Footer />
+
+        <ConditionalWrapper>
+          <Footer />
+        </ConditionalWrapper>
       </body>
     </html>
   );
