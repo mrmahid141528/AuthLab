@@ -1,8 +1,7 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY!);
-
 export const sendPasswordResetEmail = async (email: string, token: string) => {
+    const resend = new Resend(process.env.RESEND_API_KEY!);
     // Generate the reset link (local in dev, Vercel URL in prod)
     // Note: VERCEL_URL doesn't include https://
     const baseUrl = process.env.NEXT_PUBLIC_APP_URL
