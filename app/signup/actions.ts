@@ -24,7 +24,7 @@ export async function signupAction(prevState: ActionState, formData: FormData): 
     // 1. Validate input using Zod
     const validationResult = signupSchema.safeParse({ name, email, password });
     if (!validationResult.success) {
-        return { error: validationResult.error.errors[0].message };
+        return { error: validationResult.error.issues[0].message };
     }
 
     try {
