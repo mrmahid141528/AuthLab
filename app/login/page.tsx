@@ -1,17 +1,20 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import Link from "next/link";
+import { InteractiveCat } from "@/components/ui/InteractiveCat";
 import { SubmitButton } from "@/components/ui/SubmitButton";
 import { loginAction, LoginActionState } from "./actions";
 import { AuthLayout } from "@/components/ui/AuthLayout";
 
 export default function LoginPage() {
     const [state, formAction] = useActionState<LoginActionState, FormData>(loginAction, null);
+    const [isPasswordFocused, setIsPasswordFocused] = useState(false);
 
     return (
         <AuthLayout>
-            <div className="text-center mb-6">
+            <InteractiveCat isCoveringEyes={isPasswordFocused} />
+            <div className="text-center mb-6 -mt-2">
                 <h1 className="text-2xl font-bold tracking-wide text-white drop-shadow-md pb-1">Welcome</h1>
             </div>
 
@@ -40,6 +43,8 @@ export default function LoginPage() {
                         type="password"
                         required
                         placeholder="Password"
+                        onFocus={() => setIsPasswordFocused(true)}
+                        onBlur={() => setIsPasswordFocused(false)}
                         className="w-full px-5 py-3.5 bg-black/30 border border-white/20 rounded-2xl text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-black/40 transition-all duration-300 backdrop-blur-sm"
                     />
                 </div>

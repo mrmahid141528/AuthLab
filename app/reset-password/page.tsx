@@ -1,8 +1,9 @@
 "use client";
 
-import { useActionState, Suspense } from "react";
+import { useActionState, Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { InteractiveCat } from "@/components/ui/InteractiveCat";
 import { SubmitButton } from "@/components/ui/SubmitButton";
 import { resetPasswordAction, ResetPasswordState } from "./actions";
 import { AuthLayout } from "@/components/ui/AuthLayout";
@@ -12,6 +13,7 @@ function ResetFormContent() {
     const token = searchParams.get("token");
 
     const [state, formAction] = useActionState<ResetPasswordState, FormData>(resetPasswordAction, null);
+    const [isPasswordFocused, setIsPasswordFocused] = useState(false);
 
     if (!token && !state?.success) {
         return (
@@ -27,7 +29,8 @@ function ResetFormContent() {
 
     return (
         <>
-            <div className="text-center mb-6 w-full">
+            <InteractiveCat isCoveringEyes={isPasswordFocused} />
+            <div className="text-center mb-6 w-full -mt-2">
                 <h1 className="text-2xl font-bold tracking-wide text-white drop-shadow-md pb-1">Set Password</h1>
                 <p className="text-white/70 text-xs sm:text-sm font-medium">Please enter your new password below.</p>
             </div>
@@ -59,6 +62,8 @@ function ResetFormContent() {
                                 type="password"
                                 required
                                 placeholder="New Password"
+                                onFocus={() => setIsPasswordFocused(true)}
+                                onBlur={() => setIsPasswordFocused(false)}
                                 className="w-full px-5 py-3.5 bg-black/30 border border-white/20 rounded-2xl text-xs sm:text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-black/40 transition-all duration-300 backdrop-blur-sm"
                                 minLength={8}
                             />
@@ -70,6 +75,8 @@ function ResetFormContent() {
                                 type="password"
                                 required
                                 placeholder="Confirm Password"
+                                onFocus={() => setIsPasswordFocused(true)}
+                                onBlur={() => setIsPasswordFocused(false)}
                                 className="w-full px-5 py-3.5 bg-black/30 border border-white/20 rounded-2xl text-xs sm:text-sm text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 focus:bg-black/40 transition-all duration-300 backdrop-blur-sm"
                             />
                         </div>
