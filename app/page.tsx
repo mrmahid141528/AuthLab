@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AuthLayout } from "@/components/ui/AuthLayout";
+import { InteractiveCat } from "@/components/ui/InteractiveCat";
 
 export default function Home() {
     return (
@@ -9,9 +10,9 @@ export default function Home() {
                     <h1 className="text-3xl sm:text-4xl font-bold tracking-wide text-white drop-shadow-md">
                         AuthLab
                     </h1>
-                    <p className="text-white/70 text-xs sm:text-sm leading-relaxed px-2 font-medium">
-                        Learn Authentication by Building It. This is a complete learning roadmap for modern web authentication.
-                    </p>
+                    <div className="flex justify-center -mt-2 -mb-2 relative z-50">
+                        <InteractiveCat isCoveringEyes={false} />
+                    </div>
                 </div>
 
                 <div className="flex flex-col gap-3 pt-6 w-full">
