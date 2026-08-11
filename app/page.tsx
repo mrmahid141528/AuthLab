@@ -6,8 +6,8 @@ export default function Home() {
         <AuthLayout>
             <div className="text-center space-y-6 py-4">
                 <div className="space-y-4">
-                    <h1 className="text-3xl sm:text-4xl font-bold tracking-wide text-white drop-shadow-md">
-                        AuthLab
+                    <h1 className="text-3xl sm:text-4xl font-bold tracking-wide text-white drop-shadow-md flex flex-col sm:flex-row items-center justify-center gap-2">
+                        AuthLab <a href="https://www.mrmahid.com/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 text-xl sm:text-2xl font-light hover:text-emerald-300 transition-colors drop-shadow-[0_0_15px_rgba(52,211,153,0.4)]">By Mr Mahid</a>
                     </h1>
                     <p className="text-white/70 text-xs sm:text-sm leading-relaxed px-2 font-medium">
                         Learn Authentication by Building It. This is a complete learning roadmap for modern web authentication.
